@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOW TO MAKE A WEBSITE</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .banner{
+            width: 100%;
+            height: 100vh;
+            background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .navbar{
+            width: 85%;
+            margin: auto;
+            padding: 45px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar h1{
+            color: aliceblue;
+        }
+        .navbar ul li{
+            list-style: none;
+            display: inline-block;
+            margin: 0px 20px;
+            text-transform: uppercase;
+            position: relative;
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            color: antiquewhite;
+        }
+        .navbar ul li::after{
+            content: '';
+            height: 3px;
+            width: 0px;
+            background: rgb(6, 255, 247);
+            position: absolute;
+            left: 0px;
+            bottom: -8px;
+            transition: 0.5s;
+        }
+        .navbar ul li:hover::after{
+            width: 100%;
+        } 
+        .content{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            color: antiquewhite;
+        }
+        .content h1{
+            font-size: 60px;
+            /* margin-top:80px; */
+        }
+        .content p{
+            margin: 20px auto;
+            font-weight: 100;
+            font-size: large;
+            /* line-height: 25px; */
+        }
+        .content button{
+            width: 100px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius:15px;
+            font-weight: bold;
+            border: 2px solid rgb(6, 255, 247);
+            background: transparent;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+         }
+        span{
+            background: #009688;
+            height: 100%;
+            width: 0px;
+            border: 25px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 0.5s;
+        }
+        button:hover span{
+            width: 100%;
+        }
+        button:hover{
+            border: none ;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <h1>Intertior</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Kitchen</a></li>
+                <li><a href="#">Dining</a></li>
+                <li><a href="#">Bedroom</a></li>
+                <li><a href="#">Backyard</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>DESIGN YOUR HOUSE</h1>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dignissimos ab deleniti.</P>
+            <div>
+                <button type="button"><span></span> Watch More</button>
+                <button type="button"><span></span> Subscribe</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
